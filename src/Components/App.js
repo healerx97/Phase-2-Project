@@ -10,8 +10,7 @@ import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 
 function App() {
- 
-
+  
   // google directions
   // const origin = "Empire State Building"
   // const destination = "Hollywood"
@@ -39,7 +38,9 @@ function App() {
       .then(res=>res.json())
       .then(data=> {
         console.log(data)
-        setKeyLocation(data.results)
+        const newObj = data.results.slice(0,10)
+        setKeyLocation(newObj)
+
       })
     })
     } else {alert("no search inputed")}
@@ -69,7 +70,7 @@ function App() {
         <Route path="/recommended">
           <Recommended/>
         </Route>
-        <Route path="/result" component={()=> <Result keyLocationObj={keyLocationObj}/>} />
+        <Route path="/result" component={()=> <Result keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>} />
         <Route path="/">
           <Home/>
         </Route>
