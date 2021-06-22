@@ -1,6 +1,12 @@
-function Result() {
+import TitlePage from "./TitlePage"
+import KeyLocations from "./KeyLocations"
+
+function Result({keyLocationObj}) {
     return(
-        <div>Result</div>
+        <div>
+            <TitlePage/>
+            <KeyLocations keyLocationObj={keyLocationObj}/>
+        </div>
     )
 }
 

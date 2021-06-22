@@ -1,5 +1,5 @@
 import '../App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from "react-router-dom"
 
 //import components
@@ -11,31 +11,50 @@ import SearchBar from './SearchBar';
 
 function App() {
 
-
   // google directions
-  const origin = "Empire State Building"
-  const destination = "Hollywood"
-  // fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${mapAPI}
-  // `)
+  // const origin = "Empire State Building"
+  // const destination = "Hollywood"
+  // fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${mapAPI}`)
   // .then(res=>res.json())
   // .then(console.log)
   // .catch(console.log)
-
-
+  const [term, setTerm] = useState("")
+  const [keyLocationObj, setKeyLocation] = useState([])
   //google places initial search
-  // const placeSearch = "paris"
-  // fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${placeSearch}&key=${mapAPI}`)
-  // .then(res=>res.json())
-  // .then(console.log)
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (term !== "") {
+    let placeSearch = term
+    fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${placeSearch}&key=${mapAPI}`)
+    .then(res=>res.json())
+    .then(data=> {
+      //input lat, long coordinates
+      console.log(data.results[0])
+      let lat = `${data.results[0].geometry.location.lat}`
+      let long = `${data.results[0].geometry.location.lng}`
+      const type = "tourist_attraction"
+      const keyword = "things to do"
+      fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=1500&type=${type}&keyword=${keyword}&key=${mapAPI}`)
+      .then(res=>res.json())
+      .then(data=> {
+        console.log(data)
+        setKeyLocation(data.results)
+      })
+    })
+    } else {alert("no search inputed")}
+  }
+  
+  // save lat, long
 
   //google places nearby search(key locations)
-  let lat = 48.856614
-  let long = 2.3522219
-  const type = "tourist_attraction"
-  const keyword = "things to do"
-  fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=1500&type=${type}&keyword=${keyword}&key=${mapAPI}`)
-  .then(res=>res.json())
-  .then(console.log)
+  // let lat = 48.856614
+  // let long = 2.3522219
+  // const type = "tourist_attraction"
+  // const keyword = "things to do"
+  // fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=1500&type=${type}&keyword=${keyword}&key=${mapAPI}`)
+  // .then(res=>res.json())
+  // .then(console.log)
+    // save picture, name, open, 
 
   //place photos
   // <img src = {https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoref}&key={mapAPI}/>
@@ -44,14 +63,12 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <SearchBar/>
+      <SearchBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
       <Switch>
         <Route path="/recommended">
           <Recommended/>
         </Route>
-        <Route path="/result">
-          <Result/>
-        </Route>
+        <Route path="/result" component={()=> <Result keyLocationObj={keyLocationObj}/>} />
         <Route path="/">
           <Home/>
         </Route>
