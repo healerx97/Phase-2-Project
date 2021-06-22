@@ -10,7 +10,7 @@ import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 
 function App() {
-  const mapAPI = "AIzaSyCP56wJn1e5NsoDfbmizaAvg90pqLj3tkU"
+ 
 
   // google directions
   // const origin = "Empire State Building"
