@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -80,4 +80,245 @@ button.blue:hover {
   color: var(--white);
   background-color: var(--blue);
   border: 2px solid var(--blue);
+} */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* .button,
+button {
+  padding: 0.75rem;
+  border: none;
+  
+  
+  color: inherit;
+  cursor: pointer;
+  color: var(--primary);
+ 
+  
+
+} */
+.button {
+  color: black;
+ 
+  font: inherit;
+  float: center;
+  border: 1px solid rgb(204, 204, 204);
+
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s; 
+  transition: background-color 0.2s;
+  line-height: 2;
+  font-weight: 600;
+
+}
+
+.button:hover {
+  background-color: rgb(241, 192, 99)
+}
+
+.button.active {
+  background-color: rgb(191, 191, 191)
+}
+
+/* .button.active,
+.button:hover,
+button.active,
+button:focus,
+button:hover {
+  outline: none;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+} */
+
+/* button:disabled {
+  cursor: not-allowed;
+  color: var(--dark-grey);
+  background-color: var(--grey);
+} */
+
+button.blue {
+  border: 2px solid var(--blue-dark);
+  color: var(--blue);
+}
+
+button.blue.active,
+button.blue:focus,
+button.blue:hover {
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 5vw);
+  grid-gap: 5px;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* header {
+  border-color: black;
+} */
+.navbar {
+  overflow: hidden;
+ 
+        
+}
+
+
+
+  /* color: #f2f2f2;
+  display: inline-block;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 17px; */
+
+
+
+.logo_img {
+  float: left;
+  margin-right: 25px;
+  width: 50px;
+  height: 50px
+}
+
+
+
+/* .title {
+  text-align: center;
+} */
+
+
+
+#item_1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+#item_2 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+#item_3 {
+  grid-column-start: 7;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+#item_4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+#item_5 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+#item_6 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+#item_7 {
+  grid-column-start: 7;
+  grid-column-end: 11;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+#item_8 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+#item_9 {
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+.card {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.places {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.fave {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+ 
+}
+.fave:hover {
+  color: gold;
+}
+
+.favored {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  color: gold;
+
+}
+
+.favored:hover {
+  color: black;
 }
