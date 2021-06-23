@@ -5,7 +5,7 @@ function TitlePage({keyLocationObj,mapAPI}) {
         let image = loc.photos
         if (image) {
         return(
-            <Image url={image[0]['photo_reference']} mapAPI={mapAPI} key = {loc.id} ID = {keyLocationObj.indexOf(loc)}/>
+            <Image loc={loc} url={image[0]['photo_reference']} mapAPI={mapAPI} key = {loc.id} ID = {keyLocationObj.indexOf(loc)}/>
         )
         } else {return <h1>error</h1>}
     })

@@ -44,7 +44,16 @@ function App() {
     })
     } else {alert("no search inputed")}
   }
+
+
+ 
+//   function addFav (id) {
+//     let favArray = keyLocationObj.filter(location => location.id === id)
+//     setKeyLocation(favArray)
   
+// }
+
+
   // save lat, long
 
   //google places nearby search(key locations)
@@ -66,12 +75,10 @@ function App() {
       <NavBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
     
       <Switch>
-        <Route path="/recommended">
-          <Recommended/>
-        </Route>
+        <Route path="/recommended" component={() =><Recommended mapAPI={mapAPI}  setKeyLocation={setKeyLocation} />} />
         <Route path="/result" component={()=> <Result keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>} />
         <Route path="/">
-          <Home/>
+          <Home mapAPI={mapAPI} />
         </Route>
       </Switch>
     </div>
