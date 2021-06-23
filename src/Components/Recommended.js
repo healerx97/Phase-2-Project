@@ -1,6 +1,8 @@
 function Recommended() {
     return(
-        <div>Recommended</div>
+        <div>
+            <h2>Recommended</h2>
+        </div>
     )
 }
 

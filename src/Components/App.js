@@ -6,11 +6,10 @@ import { Route, Switch } from "react-router-dom"
 import Home from './Home'
 import Recommended from './Recommended';
 import Result from './Result';
-import NavBar from './NavBar';
-import SearchBar from './SearchBar';
+import NavBar from './NavBar'
 
 function App() {
-  
+
   // google directions
   // const origin = "Empire State Building"
   // const destination = "Hollywood"
@@ -64,8 +63,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar/>
-      <SearchBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
+      <NavBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
+    
       <Switch>
         <Route path="/recommended">
           <Recommended/>

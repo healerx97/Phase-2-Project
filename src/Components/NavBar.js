@@ -1,6 +1,7 @@
-import { NavLink, Link } from "react-router-dom"
+import { NavLink} from "react-router-dom"
+import SearchBar from "./SearchBar"
 
-function NavBar() {
+function NavBar({handleSubmit, term, setTerm}) {
     return (
     <header>
 
@@ -16,6 +17,8 @@ function NavBar() {
             Brochure
             </NavLink>
         </nav>
+
+        <SearchBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
     </header>
     )
 }
