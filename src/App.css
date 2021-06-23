@@ -87,54 +87,6 @@ button.blue:hover {
   text-align: center;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .button,
-button {
-  padding: 0.75rem;
-  border: none;
-  
-  
-  color: inherit;
-  cursor: pointer;
-  color: var(--primary);
- 
-  
-
-} */
 .button {
   color: black;
  
@@ -158,36 +110,6 @@ button {
 .button.active {
   background-color: rgb(191, 191, 191)
 }
-
-/* .button.active,
-.button:hover,
-button.active,
-button:focus,
-button:hover {
-  outline: none;
-  color: var(--white);
-  background-color: var(--primary);
-  border: 2px solid var(--primary);
-} */
-
-/* button:disabled {
-  cursor: not-allowed;
-  color: var(--dark-grey);
-  background-color: var(--grey);
-} */
-
-/* button.blue {
-  border: 2px solid var(--blue-dark);
-  color: var(--blue);
-}
-
-button.blue.active,
-button.blue:focus,
-button.blue:hover {
-  color: var(--white);
-  background-color: var(--blue);
-  border: 2px solid var(--blue);
-} */
 
 .gallery {
   display: grid;
