@@ -9,7 +9,7 @@ import Result from './Result';
 import NavBar from './NavBar'
 
 function App() {
-  const mapAPI = "AIzaSyCP56wJn1e5NsoDfbmizaAvg90pqLj3tkU"
+
   // google directions
   // const origin = "Empire State Building"
   // const destination = "Hollywood"
