@@ -4,7 +4,7 @@ function NavBar() {
     return (
     <header>
 
-        <nav>
+        <nav className="navBar">
             {/* Add NavLinks along with custom "activeStyle" rules */}        
             <NavLink to="/" className="button">
             Home
