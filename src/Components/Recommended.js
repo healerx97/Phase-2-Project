@@ -1,8 +1,8 @@
 function Recommended({mapAPI, setKeyLocation}) {
 
     function handleClick(e) {
-        if (e.target.value !=="") {
-            let placeSearch = e.target.value
+        if (e.target.textContent !=="") {
+            let placeSearch = e.target.textContent
             fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${placeSearch}&key=${mapAPI}`)
             .then(res=>res.json())
             .then(data=> {
