@@ -9,6 +9,7 @@ import Result from './Result';
 import NavBar from './NavBar'
 
 function App() {
+  const mapAPI = ""
 
   // google directions
   // const origin = "Empire State Building"
@@ -75,7 +76,7 @@ function App() {
       <NavBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
     
       <Switch>
-        <Route path="/recommended" component={() =><Recommended mapAPI={mapAPI}  setKeyLocation={setKeyLocation} />} />
+        <Route path="/recommended" component={() =><Recommended mapAPI={mapAPI}  setKeyLocation={setKeyLocation} setTerm = {setTerm} term = {term} handleSubmit={handleSubmit}/>} />
         <Route path="/result" component={()=> <Result keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>} />
         <Route path="/">
           <Home mapAPI={mapAPI} />

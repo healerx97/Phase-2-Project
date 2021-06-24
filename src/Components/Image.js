@@ -4,7 +4,17 @@ function Image({ url,mapAPI,ID,loc }) {
     const [favorite, setFavorite] = useState(false)
 
     function handleClick () {
-        setFavorite(!favorite)
+        
+        if (!favorite) {
+            fetch('http://localhost:3000/favLocationList', {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(loc)
+            })
+            .then(()=> setFavorite(!favorite))
+        } else {
+            setFavorite(!favorite)
+        }
     }
 
     return (
