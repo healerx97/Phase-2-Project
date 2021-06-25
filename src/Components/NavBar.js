@@ -4,21 +4,22 @@ import SearchBar from "./SearchBar"
 function NavBar({handleSubmit, term, setTerm}) {
     return (
     <header>
+        <h2 >Travel Haven</h2>
 
         <nav className="navBar">
             {/* Add NavLinks along with custom "activeStyle" rules */}        
-            <NavLink to="/" className="button">
+            <NavLink to="/" className="nav_button">
             Home
             </NavLink>
-            <NavLink className="button" to="/recommended" exact activeStyle={{color: "blue"}}>
+            <NavLink className="nav_button" to="/recommended" exact activeStyle={{color: "blue"}}>
             Recommended Travels
             </NavLink>
-            <NavLink className="button" to="/result" exact activeStyle={{color: "blue"}}>
+            <NavLink className="nav_button" to="/result" exact activeStyle={{color: "blue"}}>
             Brochure
             </NavLink>
+            <SearchBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
         </nav>
-
-        <SearchBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
+        
     </header>
     )
 }

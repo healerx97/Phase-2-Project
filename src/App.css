@@ -13,16 +13,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
@@ -85,26 +76,23 @@ button.blue:hover {
 
 .App {
   text-align: center;
+  
 }
 
-.button {
-  color: black;
- 
-  font: inherit;
-  float: center;
-  border: 1px solid rgb(204, 204, 204);
-
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s; 
-  transition: background-color 0.2s;
-  line-height: 2;
-  font-weight: 600;
-
+header {
+  /* background-color: #6e91d8; */
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  /* color: white */
 }
 
-.button:hover {
-  background-color: rgb(241, 192, 99)
+
+.nav_button:hover {
+  background-color: rgba(240, 240, 145, 0.777);
 }
 
 .button.active {
@@ -116,6 +104,12 @@ button.blue:hover {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 5vw);
   grid-gap: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%; 
+  border-style: ridge;
+  border-width: 15px;
+  border-color: rgba(240, 217, 11, 0.496);
 }
 .gallery img {
   width: 100%;
@@ -123,58 +117,75 @@ button.blue:hover {
   object-fit: cover;
 }
 
-.navBar {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 17px;
-  /* background-color: #333; */
+
+.navBar {  
+  background-color: rgb(228, 220, 220);
   overflow: hidden;
+
         
 }
 
-.searchBarForm {
+.nav_button {
+  float: left;
+  text-align: center;
+  padding: 1%;
+  display: block;
+  margin-top: 10%;  
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
+  /* border: 1px solid rgb(204, 204, 204); */
+  cursor: pointer;
+  transition: 0.3s; 
+  transition: background-color 0.2s;
+  line-height: 2;
+  font-weight: 600;        
+}
+
+.button {
+  color: black; 
+  font: inherit;
+  float: center;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s; 
+  transition: background-color 0.2s;
+  line-height: 2;
+  font-weight: 600;
+
+}
+
+.search-bar {
   flex: 1 1 auto;
-  margin: 0 1rem;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
-  padding: 14px 16px;
+  padding: 1%;
+  float: right 
   
 }
-.searchBarForm input {
-  width: 40%;
-  font-size: 1rem;
-  height: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  
-  
-}
-.searchBarForm button {
-  padding: 0 0.25rem;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+.search-bar input {
+  width: 70%;
+  font-size: 1.5rem;
+  height: 4rem;
+} 
 
 
-  /* color: #f2f2f2;
-  display: inline-block;
-  padding: 20px 25px;
-  text-decoration: none;
-  font-size: 17px; */
-
-
-
-.logo_img {
-  float: left;
-  margin-right: 25px;
-  width: 50px;
-  height: 50px
+.titlepg { 
+  font-size: 80px;
+  font-family: Impact, fantasy;
+  background-color: rgb(228, 220, 220);
+  color: white;
+  padding: 10%;
+  float: center;
 }
 
-
+.rectitle {
+  font-size: 60px;
+  font-family: Impact, fantasy;
+  float: center;
+  color: white;
+}
 
 
 #item_0 {
@@ -274,6 +285,58 @@ button.blue:hover {
   color: black;
 }
 
-.key_locations {
-  padding: 25% 25% 5%;  
+.recommendations {
+  background-color: rgb(228, 220, 220);
+  padding: 10%
 }
+
+
+.keyloc_card {
+  border-style: inset;
+  border-radius: 10px;
+  display: flex;  
+}
+.keyloc_layout {
+  padding: 5px 5px;
+  float: left;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0;
+ 
+}
+.card_container {
+  overflow: hidden;
+  margin: 5%
+}
+
+.key_desc {
+  width: 50%;
+  color: black;
+  min-height: 100%;   
+  float: right;
+  
+}
+.img_title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 50px;
+}
+.loc_desc {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.keyloc_img {
+  width: 40%;
+  height: 400px;
+}
+@media only screen and (max-width: 37.5em) {
+  .card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+

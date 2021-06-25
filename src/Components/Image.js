@@ -19,7 +19,7 @@ function Image({ mapAPI,ID,loc, url }) {
 
     return (
         <div className = "card" id = {`item_${ID}`}>
-            <img src = {`https://maps.googleapis.com/maps/api/place/photo?maxwidth=10000&photoreference=${url}&key=${mapAPI}`}/>
+            <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=10000&photoreference=${url}&key=${mapAPI}`}/>
             <button className={!favorite ? "fave" : "favored" } onClick={handleClick}> {!favorite ? "☆" : "★" }</button>
             <h3 className="places">{loc.name}</h3>
         </div>

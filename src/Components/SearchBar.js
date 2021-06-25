@@ -4,11 +4,19 @@ function SearchBar({term, setTerm, handleSubmit}) {
         setTerm(e.target.value)
     }
     return(
-        <form className= "searchBarForm" onSubmit = {handleSubmit}>
-            <input type= "text" name= "search" onChange={handleChange} placeholder="search travel location..." value = {term}/>
-            <button type = "submit" name="searchButton">Search</button>
-        </form>
+        <div className="search-bar">
+            <div className="ui search">
+                <form className= "ui icon input" onSubmit = {handleSubmit}>
+                    <input className="prompt" type= "text" name= "search" onChange={handleChange} placeholder="search travel location..." value = {term}/>
+                    <i className="search icon"></i>
+                </form>  
+            </div>
+        </div>
+
+
     )
 }
+
+
 
 export default SearchBar

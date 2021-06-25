@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useState } from 'react';
 import { Route, Switch } from "react-router-dom"
 import {useHistory} from "react-router-dom"
+import "semantic-ui-css/semantic.min.css"
 
 
 //import components
@@ -12,7 +13,7 @@ import NavBar from './NavBar'
 
 function App() {
 
-  const mapAPI = "AIzaSyCP56wJn1e5NsoDfbmizaAvg90pqLj3tkU"
+  
 
   let history = useHistory()
   // google directions
@@ -79,11 +80,9 @@ function App() {
       <NavBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
     
       <Switch>
-        <Route path="/recommended" component={() =><Recommended mapAPI={mapAPI}  setKeyLocation={setKeyLocation} setTerm = {setTerm}/>} />
-        <Route path="/result" component={()=> <Result keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>} />
-        <Route path="/">
-          <Home mapAPI={mapAPI} />
-        </Route>
+        <Route path="/recommended" component={() => <Recommended mapAPI={mapAPI}  setTerm={setTerm} setKeyLocation={setKeyLocation} />} />
+        <Route path="/result" component={()=> <Result term={term} keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>} />
+        <Route path="/" component={()=> <Home mapAPI={mapAPI} />} />
       </Switch>
     </div>
   );

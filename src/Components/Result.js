@@ -4,7 +4,7 @@ import {useState, useRef} from "react"
 import {jsPDF} from "jspdf"
 import html2canvas from 'html2canvas';
 
-function Result({keyLocationObj, mapAPI}) {
+function Result({keyLocationObj, mapAPI, term}) {
     const [details, setDetails] = useState(false)
     function showDetails () {
         setDetails(!details)
@@ -22,9 +22,9 @@ function Result({keyLocationObj, mapAPI}) {
     
     return(
         <div ref={inputRef}>
-            {!details ? <TitlePage keyLocationObj={keyLocationObj} mapAPI={mapAPI}/> : <KeyLocations keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>}
+            {!details ? <TitlePage term={term} keyLocationObj={keyLocationObj} mapAPI={mapAPI}/> : <KeyLocations keyLocationObj={keyLocationObj} mapAPI={mapAPI}/>}
 
-            <button className="toggle_btn" onClick={showDetails}>
+            <button className="ui blue button" onClick={showDetails}>
                     {details ? "Go Back" : "Show Details"}
             </button>
             <button onClick={printDocument}>Download</button>

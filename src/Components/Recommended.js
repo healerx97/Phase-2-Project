@@ -36,7 +36,7 @@ function Recommended({mapAPI, setKeyLocation, setTerm}) {
             <div onClick={handleClick}>
                 <Link className="button" to="/result" >
                 Los Angeles
-                </Link>
+                </Link>                
             </div>
             <br/>
             <div onClick={handleClick}>
@@ -83,7 +83,7 @@ function Recommended({mapAPI, setKeyLocation, setTerm}) {
             <br/>
             <div onClick={handleClick}>
                 <Link className="button" to="/result" >
-                Tokyo
+                Cape Town, South Africa
                 </Link>
             </div>
             <br/>
@@ -101,7 +101,7 @@ function Recommended({mapAPI, setKeyLocation, setTerm}) {
             <br/>
             <div onClick={handleClick}>
                 <Link className="button" to="/result" >
-                New York City
+                San Francisco
                 </Link>
             </div>
             <br/>
@@ -122,6 +122,8 @@ function Recommended({mapAPI, setKeyLocation, setTerm}) {
                 Sydney
                 </Link>
             </div>
+    
+
         </div>
     )
 }
