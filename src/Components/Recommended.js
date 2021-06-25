@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-function Recommended({mapAPI, setKeyLocation, setTerm}) {
+function Recommended({mapAPI, setKeyLocation, setTerm, setLocationName}) {
 
     function handleClick(e) {
         if (e.target.textContent !== "") {
@@ -11,6 +11,7 @@ function Recommended({mapAPI, setKeyLocation, setTerm}) {
               console.log(data.results[0])
               let lat = `${data.results[0].geometry.location.lat}`
               let long = `${data.results[0].geometry.location.lng}`
+              setLocationName(data.results[0]['formatted_address'])
               const type = "tourist_attraction"
               const keyword = "things to do"
               fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=1500&type=${type}&keyword=${keyword}&key=${mapAPI}`)

@@ -1,5 +1,5 @@
 import Image from "./Image"
-function TitlePage({keyLocationObj,mapAPI, term}) {
+function TitlePage({keyLocationObj,mapAPI, term, locationName}) {
     const renderImage = keyLocationObj.map(loc=>{
         
         let image = loc.photos
@@ -13,7 +13,7 @@ function TitlePage({keyLocationObj,mapAPI, term}) {
     })
     return (
         <div>
-            <h2 className="titlepg">{term}</h2>
+            <h2 className="titlepg">{locationName}</h2>
             
             <div className="gallery">
                 
