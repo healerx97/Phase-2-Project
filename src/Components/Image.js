@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Image({ url,mapAPI,ID,loc }) {
+function Image({ mapAPI,ID,loc, url }) {
     const [favorite, setFavorite] = useState(false)
 
     function handleClick () {

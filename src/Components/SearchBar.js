@@ -1,3 +1,4 @@
+
 function SearchBar({term, setTerm, handleSubmit}) {
     function handleChange(e) {
         setTerm(e.target.value)
