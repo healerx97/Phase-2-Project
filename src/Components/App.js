@@ -12,7 +12,7 @@ import Result from './Result';
 import NavBar from './NavBar'
 
 function App() {
-  const mapAPI = "AIzaSyCP56wJn1e5NsoDfbmizaAvg90pqLj3tkU"
+  const mapAPI = ""
 
   
 
