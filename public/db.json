@@ -910,6 +910,53 @@
       "user_ratings_total": 25407,
       "vicinity": "Niederkirchnerstraße 8, Berlin",
       "id": 18
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 52.3759167,
+          "lng": 4.896426
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.37720377989272,
+            "lng": 4.897894979892721
+          },
+          "southwest": {
+            "lat": 52.37450412010728,
+            "lng": 4.895195320107277
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "name": "Damrak",
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109242808191765750638\">Gerlof Hoogeveen</a>"
+          ],
+          "photo_reference": "ATtYBwKBLqiykdqXkpc7CHAmOfHVnWMPgtPOeMzCur5tFEaNWYpV_YfaTXWS4M89u5wSIcz2ZIvsxkc2-ZrtiIVjCIUEXnhdn0JLLaHFVzgV3T3hddNzUz0KmYx1WXvLriyrVFO0jyCOdlf9gPyEl3P4jj84qk0kXZ3qrHgoxoS52kNjp35c",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJIYmKcREJxkcRt5bNQML2ALE",
+      "plus_code": {
+        "compound_code": "9VGW+9H Amsterdam",
+        "global_code": "9F469VGW+9H"
+      },
+      "rating": 1,
+      "reference": "ChIJIYmKcREJxkcRt5bNQML2ALE",
+      "scope": "GOOGLE",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "Damrak, Amsterdam",
+      "id": 19
     }
   ]
 }
