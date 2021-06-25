@@ -1,5 +1,5 @@
 import Image from "./Image"
-function TitlePage({keyLocationObj,mapAPI, term, locationName}) {
+function TitlePage({keyLocationObj,mapAPI, locationName}) {
     const renderImage = keyLocationObj.map(loc=>{
         
         let image = loc.photos

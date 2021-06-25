@@ -12,6 +12,7 @@ import Result from './Result';
 import NavBar from './NavBar'
 
 function App() {
+
   
 
   let history = useHistory()
@@ -82,8 +83,8 @@ function App() {
       <NavBar handleSubmit={handleSubmit} term={term} setTerm={setTerm}/>
     
       <Switch>
-        <Route path="/recommended" component={() => <Recommended mapAPI={mapAPI}  setTerm={setTerm} setKeyLocation={setKeyLocation} setLocationName={setLocationName}/>} />
-        <Route path="/result" component={()=> <Result term={term} keyLocationObj={keyLocationObj} mapAPI={mapAPI} locationName={locationName}/>} />
+        <Route path="/recommended" component={() => <Recommended mapAPI={mapAPI}  setTerm={setTerm} setKeyLocation={setKeyLocation} setLocationName={setLocationName} />} />
+        <Route path="/result" component={()=> <Result  keyLocationObj={keyLocationObj} mapAPI={mapAPI} locationName={locationName}/>} />
         <Route path="/" component={()=> <Home mapAPI={mapAPI} />} />
       </Switch>
     </div>

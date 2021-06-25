@@ -1,6 +1,6 @@
 import { Image } from 'semantic-ui-react'
 
-function KeyLocations({keyLocationObj, mapAPI, term}) {
+function KeyLocations({keyLocationObj, mapAPI, term, locationName}) {
     const renderKeyLoc = keyLocationObj.map(loc=> {
         return (
             <div className="keyloc_card">
@@ -16,7 +16,7 @@ function KeyLocations({keyLocationObj, mapAPI, term}) {
     })
     return (
         <div className="">
-            <h2>Things To do in {term} </h2>
+            <h2>Things To do in {locationName} </h2>
             
             <div className="card_container">
                 <div className="keyloc_layout">

@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar"
 function NavBar({handleSubmit, term, setTerm}) {
     return (
     <header>
-        <h2 >Travel Haven</h2>
+        <h2 className="header_title" >Travel Haven</h2>
 
         <nav className="navBar">
             {/* Add NavLinks along with custom "activeStyle" rules */}        
