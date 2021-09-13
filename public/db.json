@@ -957,6 +957,57 @@
       "user_ratings_total": 1,
       "vicinity": "Damrak, Amsterdam",
       "id": 19
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -33.926046,
+          "lng": 18.4280581
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -33.92441827010728,
+            "lng": 18.42903435
+          },
+          "southwest": {
+            "lat": -33.92711792989272,
+            "lng": 18.42512935
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "name": "Castle of Good Hope",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110227667278285789034\">Omar Hamdi</a>"
+          ],
+          "photo_reference": "ATtYBwJkHTcsBMvExA_H0RhMYxa3dtx5TW88i_Z1hhwP4M0eaF6FDVoGZK0ekgvA7fm55R2uLBkdadL4h_4n890o0O_Gf1vHnLhMDbIrj-eN3bkxM58LNc-8LavsyqcUjEQ-uv2xxwgXrdwMO2JtFe62Nt5nujMf-BKnmThbzTYIAlbFFdYI",
+          "width": 1620
+        }
+      ],
+      "place_id": "ChIJwUYG_oddzB0RZYGNwMhCuy0",
+      "plus_code": {
+        "compound_code": "3CFH+H6 Cape Town",
+        "global_code": "4FRW3CFH+H6"
+      },
+      "rating": 4.2,
+      "reference": "ChIJwUYG_oddzB0RZYGNwMhCuy0",
+      "scope": "GOOGLE",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 8700,
+      "vicinity": "Darling St & Buitenkant St, Cape Town",
+      "id": 20
     }
   ]
 }

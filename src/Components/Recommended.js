@@ -17,8 +17,19 @@ function Recommended({mapAPI, setKeyLocation, setTerm, setLocationName}) {
               fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=1500&type=${type}&keyword=${keyword}&key=${mapAPI}`)
               .then(res=>res.json())
               .then(data=> {
-                console.log(data)
-                const newObj = data.results.slice(0,10)
+                let n = 0
+                const newObj = []
+                let i = 0
+                while (i < 10) {
+                    if (data.results[n].photos) {
+                        newObj.push(data.results[n])
+                        n++
+                        i++
+                    }
+                    else {
+                        n++
+                    }
+                }
                 setKeyLocation(newObj)
                 setTerm(placeSearch)
                 // history.push("/result")

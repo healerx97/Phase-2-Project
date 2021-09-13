@@ -18,7 +18,7 @@ function TitlePage({keyLocationObj,mapAPI, locationName}) {
             <div className="gallery">
                 
 
-                    {renderImage}
+                {renderImage}
                     
 
             </div>

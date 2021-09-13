@@ -12,9 +12,7 @@ import Result from './Result';
 import NavBar from './NavBar'
 
 function App() {
-  const mapAPI = ""
-
-  
+  const mapAPI = process.env.REACT_APP_API_KEY
 
   let history = useHistory()
   // google directions
@@ -47,7 +45,19 @@ function App() {
       .then(res=>res.json())
       .then(data=> {
         console.log(data)
-        const newObj = data.results.slice(0,10)
+        let n = 0
+        const newObj = []
+        let i = 0
+        while (i < 10) {
+          if (data.results[n].photos) {
+            newObj.push(data.results[n])
+            n++
+            i++
+          }
+          else {
+            n++
+          }
+        }
         setKeyLocation(newObj)
         history.push("/result")
       })
