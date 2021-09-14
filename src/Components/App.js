@@ -49,7 +49,7 @@ function App() {
         const newObj = []
         let i = 0
         while (i < 10) {
-          if (data.results[n].photos) {
+          if (data.results[n] && data.results[n].photos) {
             newObj.push(data.results[n])
             n++
             i++
