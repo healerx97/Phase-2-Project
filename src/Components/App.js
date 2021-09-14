@@ -13,7 +13,7 @@ import NavBar from './NavBar'
 
 function App() {
   const mapAPI = process.env.REACT_APP_API_KEY
-  console.log(mapAPI)
+  // console.log(mapAPI)
   let history = useHistory()
   // google directions
   // const origin = "Empire State Building"
