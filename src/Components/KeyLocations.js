@@ -15,7 +15,7 @@ function KeyLocations({keyLocationObj, mapAPI, term, locationName}) {
         )
     })
     return (
-        <div>
+        <div id ="downloadable2">
             <h2>Things To do in {locationName} </h2>
             
             <div className="card_container">
