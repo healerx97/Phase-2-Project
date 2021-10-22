@@ -8,9 +8,10 @@ function Recommended({mapAPI, setKeyLocation, setTerm, setLocationName}) {
             .then(res=>res.json())
             .then(data=> {
               //input lat, long coordinates
-              console.log(data.results[0])
-              let lat = `${data.results[0].geometry.location.lat}`
-              let long = `${data.results[0].geometry.location.lng}`
+              console.log(data)
+              if (data.results[0]) {
+              let lat = `${data.results[0]?.geometry.location.lat}`
+              let long = `${data.results[0]?.geometry.location.lng}`
               setLocationName(data.results[0]['formatted_address'])
               const type = "tourist_attraction"
               const keyword = "things to do"
@@ -21,7 +22,7 @@ function Recommended({mapAPI, setKeyLocation, setTerm, setLocationName}) {
                 const newObj = []
                 let i = 0
                 while (i < 10) {
-                    if (data.results[n].photos) {
+                    if (data.results[n]?.photos) {
                         newObj.push(data.results[n])
                         n++
                         i++
@@ -34,6 +35,7 @@ function Recommended({mapAPI, setKeyLocation, setTerm, setLocationName}) {
                 setTerm(placeSearch)
                 // history.push("/result")
               })
+            }
             })
             } else {alert("no search inputed")}
                 
